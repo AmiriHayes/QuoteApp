@@ -20,8 +20,12 @@ const AppProvider = ({ children }) => {
     
     const fetchData = () => {
       fetch('https://quote-app-c601.onrender.com/api')
-        .then((response) => response.json())
+        .then((response) => {
+          response.json()
+          console.log(response)
+        })
         .then((data) => {
+          console.log(data)
           setBackendData(data.quoteList)
           setNumQuotes(data.quoteList.length)
           setQuote(data.quoteList[index])

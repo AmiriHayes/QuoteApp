@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
   let [numQuotes, setNumQuotes] = useState(0)
 
   useEffect(() => {
+    console.log('got here')
     const fetchData = async () => {
       const reponse = await fetch('/api', {
         headers:{

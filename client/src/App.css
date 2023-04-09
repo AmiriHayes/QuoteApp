@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: lightgray;
+}
+
+@media screen and (max-width: 992px) {
+    span .br {
+        display: block;
+    }
+}

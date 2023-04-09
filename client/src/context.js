@@ -10,28 +10,28 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
 //     console.log('got here')
-//     const fetchData = async () => {
-//       const reponse = await fetch('https://quote-app-c601.onrender.com/api').catch((err) => console.log(err))
-//       const data = await reponse.json()
-//       setBackendData(data.quoteList)
-//       setNumQuotes(data.quoteList.length)
-//       setQuote(data.quoteList[index])
-//     }
-    
-    const fetchData = () => {
-      fetch('https://quote-app-c601.onrender.com/api')
-        .then((response) => {
-          response.json()
-          console.log(response)
-        })
-        .then((data) => {
-          console.log(data)
-          setBackendData(data.quoteList)
-          setNumQuotes(data.quoteList.length)
-          setQuote(data.quoteList[index])
-        })
-        .catch((err) => console.log(err))      
+    const fetchData = async () => {
+      const reponse = await fetch('https://quote-app-c601.onrender.com/api').catch((err) => console.log(err))
+      const data = await reponse.json()
+      setBackendData(data.quoteList)
+      setNumQuotes(data.quoteList.length)
+      setQuote(data.quoteList[index])
     }
+    
+//     const fetchData = () => {
+//       fetch('https://quote-app-c601.onrender.com/api')
+//         .then((response) => {
+//           response.json()
+//           console.log(response)
+//         })
+//         .then((data) => {
+//           console.log(data)
+//           setBackendData(data.quoteList)
+//           setNumQuotes(data.quoteList.length)
+//           setQuote(data.quoteList[index])
+//         })
+//         .catch((err) => console.log(err))      
+//     }
     
     fetchData();
   }, [index])

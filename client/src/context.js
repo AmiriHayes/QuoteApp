@@ -13,7 +13,7 @@ const AppProvider = ({ children }) => {
     const fetchData = async () => {
       const reponse = await fetch('/api', {
         headers:{
-            "accepts":"application/json"
+            "accept":"application/json"
         }
       })
       console.log('got response')

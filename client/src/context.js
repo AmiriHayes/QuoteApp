@@ -16,6 +16,7 @@ const AppProvider = ({ children }) => {
             "accepts":"application/json"
         }
       })
+      console.log('got here')
       const data = await reponse.json()
       setBackendData(data.quoteList)
       setNumQuotes(data.quoteList.length)

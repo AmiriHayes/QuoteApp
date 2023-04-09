@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server",
     "dev": "nodemon server",
-    "build": "npm i"
+    "build": "npm ci"
   },
   "keywords": [],
   "author": "",

@@ -10,7 +10,11 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const reponse = await fetch('/api')
+      const reponse = await fetch('/api', {
+        headers:{
+            "accepts":"application/json"
+        }
+      })
       const data = await reponse.json()
       setBackendData(data.quoteList)
       setNumQuotes(data.quoteList.length)

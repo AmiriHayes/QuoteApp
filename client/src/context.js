@@ -9,9 +9,8 @@ const AppProvider = ({ children }) => {
   let [numQuotes, setNumQuotes] = useState(0)
 
   useEffect(() => {
-//     console.log('got here')
     const fetchData = async () => {
-      const reponse = await fetch('https://quote-app-c601.onrender.com/api').catch((err) => console.log(err))
+      const reponse = await fetch('https://quote-app-c601.onrender.com/api')
       const data = await reponse.json()
       setBackendData(data.quoteList)
       setNumQuotes(data.quoteList.length)

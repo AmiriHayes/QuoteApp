@@ -10,12 +10,13 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const reponse = await fetch('https://quote-app-c601.onrender.com/api')
+      const reponse = await fetch('/api')
       const data = await reponse.json()
       setBackendData(data.quoteList)
       setNumQuotes(data.quoteList.length)
       setQuote(data.quoteList[index])
     }
+    fetchData();
     
 //     const fetchData = () => {
 //       fetch('https://quote-app-c601.onrender.com/api')
@@ -31,8 +32,6 @@ const AppProvider = ({ children }) => {
 //         })
 //         .catch((err) => console.log(err))      
 //     }
-    
-    fetchData();
   }, [index])
 
   const changeForm = () => { setForm(!form) }

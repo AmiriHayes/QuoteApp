@@ -10,7 +10,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const reponse = await fetch('/api')
+      const reponse = await fetch('https://jsonplaceholder.typicode.com/todos/1')
       const data = await reponse.json()
       setBackendData(data.quoteList)
       setNumQuotes(data.quoteList.length)

@@ -10,11 +10,16 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const reponse = await fetch('/api')
-      const data = await reponse.json()
-      setBackendData(data.quoteList)
-      setNumQuotes(data.quoteList.length)
-      setQuote(data.quoteList[index])
+      fetch('http://localhost:10000/api')
+        .then(response => response.json())
+        .then(data => {
+          setBackendData(data.quoteList)
+          setNumQuotes(data.quoteList.length)
+          setQuote(data.quoteList[index])
+        })
+        .catch(error => {
+          console.error(error);
+        });
     }
     fetchData();
   }, [index])

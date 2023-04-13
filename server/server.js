@@ -1,8 +1,10 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const cors = require('cors');
 app.use(express.json());
-const mongoose = require('mongoose')
-port = process.env.PORT || 4000
+app.use(cors());
+const mongoose = require('mongoose');
+port = process.env.PORT || 10000;
 
 // spin up server if connected to database
 require('dotenv').config();

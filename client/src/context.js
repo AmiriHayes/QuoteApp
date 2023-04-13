@@ -10,7 +10,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      fetch('http://localhost:10000/api')
+      fetch('https://quote-app-c601.onrender.com/api')
         .then(response => response.json())
         .then(data => {
           setBackendData(data.quoteList)

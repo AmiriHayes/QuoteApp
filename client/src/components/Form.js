@@ -29,7 +29,7 @@ const Form = () => {
       let validData = handleInput(input)
       if (validData) {
         // post to db
-        fetch("/api", {
+        fetch("https://quote-app-c601.onrender.com/api", {
           method: "POST",
           headers: { "Content-Type": "application/json", },
           body: JSON.stringify(validData),
@@ -90,7 +90,7 @@ const Form = () => {
       </form>
       <div className = "d-flex justify-content-center">
         <p className = "text-center text-light bg-dark w-75 mt-4 px-4 py-3 rounded"> 
-          On submitting this form, you'll recieve 
+          On submitting this form, you'll receive 
           an SMS text message to verify your identity;
           to be added as a quote submitter, email&nbsp;  
           <a 

@@ -20,8 +20,29 @@ const AppProvider = ({ children }) => {
         .catch(error => {
           console.error(error);
         });
+      const reponse = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+      const data = await reponse.json()
+      console.log(data)
+      setBackendData(data.quoteList)
+//       setNumQuotes(data.quoteList.length)
+      setQuote(data.quoteList[index])
     }
     fetchData();
+    
+//     const fetchData = () => {
+//       fetch('https://quote-app-c601.onrender.com/api')
+//         .then((response) => {
+//           response.json()
+//           console.log(response)
+//         })
+//         .then((data) => {
+//           console.log(data)
+//           setBackendData(data.quoteList)
+//           setNumQuotes(data.quoteList.length)
+//           setQuote(data.quoteList[index])
+//         })
+//         .catch((err) => console.log(err))      
+//     }
   }, [index])
 
   const changeForm = () => { setForm(!form) }

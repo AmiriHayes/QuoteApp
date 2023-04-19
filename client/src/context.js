@@ -20,12 +20,6 @@ const AppProvider = ({ children }) => {
         .catch(error => {
           console.error(error);
         });
-      const reponse = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-      const data = await reponse.json()
-      console.log(data)
-      setBackendData(data.quoteList)
-//       setNumQuotes(data.quoteList.length)
-      setQuote(data.quoteList[index])
     }
     fetchData();
     

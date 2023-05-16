@@ -10,7 +10,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      fetch('https://quote-app-c601.onrender.com/api')
+      fetch('https://luxury-donut-5de2c4.netlify.app/.netlify/functions/api/')
         .then(response => response.json())
         .then(data => {
           setBackendData(data.quoteList)
@@ -22,21 +22,6 @@ const AppProvider = ({ children }) => {
         });
     }
     fetchData();
-    
-//     const fetchData = () => {
-//       fetch('https://quote-app-c601.onrender.com/api')
-//         .then((response) => {
-//           response.json()
-//           console.log(response)
-//         })
-//         .then((data) => {
-//           console.log(data)
-//           setBackendData(data.quoteList)
-//           setNumQuotes(data.quoteList.length)
-//           setQuote(data.quoteList[index])
-//         })
-//         .catch((err) => console.log(err))      
-//     }
   }, [index])
 
   const changeForm = () => { setForm(!form) }

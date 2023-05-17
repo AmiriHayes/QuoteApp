@@ -53,7 +53,7 @@ const Quote = () => {
                     <a 
                       className = "text-dark text-uppercase text-decoration-none"
                       href={infolink}
-                    >learn more here</a>
+                    >more about {author}</a>
               </button>} 
             </div>
           </div>

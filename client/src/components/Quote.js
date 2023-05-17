@@ -5,7 +5,7 @@ import { useGlobalContext } from '../../src/context';
 
 const Quote = () => {
   const {quote, numQuotes, prevQuote, nextQuote, changeForm} = useGlobalContext();
-  const {id, name, text, author, date, origin, color} = quote;
+  const {id, name, text, author, date, origin, color, infolink} = quote;
   
   return (<>
     <main className = "mb-3" style={{maxWidth: 100 + '%'}}>
@@ -47,6 +47,14 @@ const Quote = () => {
                   {author}, <cite title = "{origin}">{origin}</cite>
                 </figcaption>
               </h3>
+              {infolink && 
+              <button className = "btn btn-sm my-3 px-2 py-2 text-center  rounded" 
+                  style={{backgroundColor: `${color}`}}> 
+                    <a 
+                      className = "text-dark text-uppercase text-decoration-none"
+                      href="{infolink}" target="_blank" rel="noreferrer"
+                    >learn more here</a>
+              </button>} 
             </div>
           </div>
           <p className = "mt-3 mb-1"> [ Family Quote #{id} ] </p>

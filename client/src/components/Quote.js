@@ -8,7 +8,7 @@ const Quote = () => {
   const {id, name, text, author, date, origin, color, infolink} = quote;
   
   return (<>
-    <main className = "mb-5" style={{maxWidth: 100 + '%'}}>
+    <main className = "mb-3" style={{maxWidth: 100 + '%'}}>
       <section className = "container my-3">
         <div className = "one text-center">
           <button type = "button" className = "btn" onClick={prevQuote}>
@@ -48,7 +48,7 @@ const Quote = () => {
                 </figcaption>
               </h3>
               {infolink && 
-              <button className = "btn btn-sm my-2 px-2 py-2 text-center  rounded" 
+              <button className = "btn btn-sm my-2 mb-1 px-2 py-2 text-center  rounded" 
                   style={{backgroundColor: `${color}`}}> 
                     <a 
                       className = "text-dark text-uppercase text-decoration-none"
@@ -57,7 +57,7 @@ const Quote = () => {
               </button>} 
             </div>
           </div>
-          <p className = "mt-3 mb-1"> [ Family Quote #{id} ] </p>
+          <p className = "mt-2 mb-1"> [ Family Quote #{id} ] </p>
         </div>
       </article>
     </main>

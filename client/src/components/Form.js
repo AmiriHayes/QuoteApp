@@ -15,6 +15,7 @@ let format = {
   text: "",
   author: "",
   origin: "",
+  infolink: "",
   date: `${today || "< date >"}`,
   color: "white"
 }
@@ -73,6 +74,13 @@ const Form = () => {
                 <div className = "d-flex flex-row justify-content-between">
                   <span className = "mt-2">Origin:&nbsp;&nbsp;</span>
                   <input type = "text" value = {input.origin} className = "w-75 p-1 my-1"
+                    onChange={(e) => setInput({...input, origin: e.target.value})} />
+                </div>
+                <div className = "d-flex flex-row justify-content-between">
+                  <span className = "mt-2">Link:&nbsp;&nbsp;</span>
+                  <input type = "text" value = {input.infolink} 
+                    className = "w-75 p-1 my-1"
+                    placeholder = "totally optional"
                     onChange={(e) => setInput({...input, origin: e.target.value})} />
                 </div>
                 <div className = "d-flex flex-row justify-content-between">

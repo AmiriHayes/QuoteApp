@@ -52,7 +52,7 @@ const Quote = () => {
                   style={{backgroundColor: `${color}`}}> 
                     <a 
                       className = "text-dark text-uppercase text-decoration-none"
-                      href="{infolink}" target="_blank" rel="noreferrer"
+                      href="{infolink}"
                     >learn more here</a>
               </button>} 
             </div>

@@ -7,6 +7,7 @@ const quoteSchema = new Schema({
   text: { type: String, required: true },
   author: { type: String, required: true },
   origin: { type: String, required: true },
+  infolink: { type: String, required: false },
   date: { type: String, required: true },
   color: { type: String, required: true }
 }, { timestamps: true })

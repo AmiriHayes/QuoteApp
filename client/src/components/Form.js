@@ -80,14 +80,14 @@ const Form = () => {
                   <span className = "mt-2">Link:&nbsp;&nbsp;</span>
                   <input type = "text" value = {input.infolink} 
                     className = "w-75 p-1 my-1"
-                    placeholder = "totally optional"
-                    onChange={(e) => setInput({...input, origin: e.target.value})} />
+                    placeholder = "(optional link)"
+                    onChange={(e) => setInput({...input, infolink: e.target.value})} />
                 </div>
                 <div className = "d-flex flex-row justify-content-between">
                   <span className = "mt-2">Name:&nbsp;&nbsp;</span>
                   <input type = "text" value = {input.name} 
                     className = "w-75 p-1 my-1"
-                    placeholder = "first name here!"
+                    placeholder = "your name here!"
                     onChange={(e) => setInput({...input, name: e.target.value})} />
                 </div>
               </span>

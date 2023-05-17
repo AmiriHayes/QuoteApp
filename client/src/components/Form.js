@@ -37,6 +37,7 @@ const Form = () => {
         }).then(() => {
           console.log("success")
           setInput(format)
+          location.reload()
         })
       } 
     } catch (error) {

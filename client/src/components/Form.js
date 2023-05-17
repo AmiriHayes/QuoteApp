@@ -25,6 +25,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    changeForm()
     try {
       let validData = handleInput(input)
       if (validData) {
@@ -36,7 +37,6 @@ const Form = () => {
         }).then(() => {
           console.log("success")
           setInput(format)
-          changeForm()
         })
       } 
     } catch (error) {

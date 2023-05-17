@@ -37,7 +37,7 @@ const Form = () => {
         }).then(() => {
           console.log("success")
           setInput(format)
-          location.reload()
+          window.location.reload();
         })
       } 
     } catch (error) {
@@ -76,9 +76,10 @@ const Form = () => {
                     onChange={(e) => setInput({...input, origin: e.target.value})} />
                 </div>
                 <div className = "d-flex flex-row justify-content-between">
-                  <span className = "mt-2">Name:&nbsp;&nbsp;</span>
-                  <input type = "text" value = {input.name} className = "w-75 p-1 my-1"
-                    placeholder = "your name here!"
+//                   {<span className = "mt-2">Name:&nbsp;&nbsp;</span>}
+                  <input type = "text" value = {input.name} 
+                    className = "w-100 p-1 my-1"
+                    placeholder = "your first name here!"
                     onChange={(e) => setInput({...input, name: e.target.value})} />
                 </div>
               </span>

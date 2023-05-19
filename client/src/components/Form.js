@@ -31,7 +31,7 @@ const Form = () => {
       let validData = handleInput(input)
       if (validData) {
         // post to db
-        fetch("https://quote-app-c601.onrender.com/api", {
+        fetch("https://luxury-donut-5de2c4.netlify.app/.netlify/functions/api/", {
           method: "POST",
           headers: { "Content-Type": "application/json", },
           body: JSON.stringify(validData),

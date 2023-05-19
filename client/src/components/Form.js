@@ -28,13 +28,13 @@ const Form = () => {
     e.preventDefault()
     changeForm()
     try {
-      let validData = handleInput(input)
+//       let validData = handleInput(input)
       if (validData) {
         // post to db
         fetch("https://luxury-donut-5de2c4.netlify.app/.netlify/functions/api/", {
           method: "POST",
           headers: { "Content-Type": "application/json", },
-          body: JSON.stringify(validData),
+          body: JSON.stringify(input),
         }).then(() => {
           console.log("success")
           setInput(format)

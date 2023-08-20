@@ -1,5 +1,5 @@
 # Hayes Family Quotes
-[https://hayesquotes.net/](https://hayesquotes.net/)
+[hayesquotes.net](https://hayesquotes.net/)
 
 ...
 
